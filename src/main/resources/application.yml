@@ -1,0 +1,15 @@
+logging:
+  file: ~/bpr.log
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: INFO
+        web: INFO
+      hibernate: INFO
+      apache:
+        commons:
+          dbcp2: INFO
+
+server:
+  port: 80
