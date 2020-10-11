@@ -4,7 +4,7 @@ import cn.himavat.bpr.onenet.model.OnenetMsg;
 import org.springframework.stereotype.Component;
 
 @Component
-public class OnenetFakeHelper {
+public class FakeOnenetHelper {
 
     public boolean checkToken(String msg, String nonce, String signature, String token){
         return true;

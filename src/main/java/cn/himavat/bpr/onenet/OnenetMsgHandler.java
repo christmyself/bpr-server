@@ -29,7 +29,7 @@ public class OnenetMsgHandler {
         var msg = (Map) onenetMsg.getMsg();
         log.info("The Signature is {} And the nonce is {}", onenetMsg.getMsg_signature(), onenetMsg.getNonce());
         log.info("Received:{}", msg.toString());
-        var at = (Long) msg.get("at");
+        var at = (Long) msg.get("at") + 8 * 60 * 60 * 1000;
         var devId = (Integer) msg.get("dev_id");
         /**
          * 标识消息类型

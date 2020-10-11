@@ -1,7 +1,7 @@
-package cn.himavat.bpr;
+package cn.himavat.bpr.onenet;
 
 
-import cn.himavat.bpr.onenet.OnenetFakeHelper;
+import cn.himavat.bpr.onenet.OnenetHelper;
 import cn.himavat.bpr.onenet.OnenetMsgHandler;
 import cn.himavat.bpr.onenet.model.OnenetMsg;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +20,7 @@ import java.security.NoSuchAlgorithmException;
 @Slf4j
 @RestController
 @EnableAutoConfiguration
-public class OnenetMsgReceiverController {
+public class OnenetCallbackController {
 
     private static final String token = "zdqcmn";
     private static final String aeskey = "whBx2ZwAU5LOHVimPj1MPx56QRe3OsGGWRe4dr17crV";
@@ -28,7 +28,7 @@ public class OnenetMsgReceiverController {
     @Autowired
     private OnenetMsgHandler onenetMsgHandler = null;
     @Autowired
-    private OnenetFakeHelper onenetHelper = null;
+    private OnenetHelper onenetHelper = null;
 
     @RequestMapping(value = "/receive", method = RequestMethod.GET)
     public String validate(@RequestParam("msg") String msg,
